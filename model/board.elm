@@ -16,10 +16,6 @@ blueCell =
   [ ("color", "blue")
   ]
 
-type Action
-  = NoOp
-  | ChangeColour Int
-
 -- Model
 
 type Columns
@@ -49,11 +45,8 @@ initialRows rowSize size =
   in
      if size > 0 then Row row (initialRows rowSize (size - 1)) else emptyRow
 
-initialModel =
-  let
-      row = 4
-  in
-     {
-       size = 4,
-       cells = initialRows row row
-     }
+initialModel size =
+  {
+    size = size,
+    cells = initialRows size size
+  }

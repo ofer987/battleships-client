@@ -41,11 +41,3 @@ updateRow rows id =
           columns = updateCell head id
       in
          Row columns tailRows
-
-update action model =
-  case action of
-    NoOp ->
-      model
-
-    ChangeColour id ->
-      { model | cells = updateRow model.cells id }
