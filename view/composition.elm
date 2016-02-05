@@ -7,10 +7,10 @@ import Html exposing (..)
 
 view address model =
   Html.div [] [
-    Html.text "Hello Battleships", Html.text "I am a little teapot",
-    Ship.view model.ships
-    Board.view address model.board
+    Html.text "Hello Battleships"
+    -- , Ship.view model.ships
+    , Board.view address model.board
     ]
 
-viewShips ships
-  Ship.view ship
+-- viewShips ships =
+--   Ship.view ships

@@ -18,8 +18,10 @@ columnsView address columns =
 
     Cell head tail ->
       let
-          cellView = span [ id (toString head.id), style head.style
-            -- onClick address (ChangeColour head.id)
+          cellView = span [
+            id (toString head.id),
+            style head.style,
+            onClick address (ChangeColour head.id)
           ] [ Html.text "bye" ]
       in
          (cellView :: columnsView address tail)

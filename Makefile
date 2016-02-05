@@ -1,2 +1,7 @@
 build:
-	elm make Main.elm model/*.elm view/*.elm update/*.elm
+	elm make Main.elm \
+		model/board/*.elm \
+		model/*.elm \
+		view/*.elm \
+		update/board/*.elm \
+		update/*.elm
